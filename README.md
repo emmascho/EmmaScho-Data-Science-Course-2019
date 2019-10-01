@@ -1,2 +1,5 @@
-# Intro-to-R-1
-#Test 1 for readme file
+# Data Science Course 2019
+
+### Emma Schoenmakers s1754286
+
+This folder contains Data Science course material (including challenges, links,...) as well as Coding Club practices
