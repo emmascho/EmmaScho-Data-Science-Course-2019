@@ -1,5 +1,5 @@
 # Common Folder
-** Contains downloaded files from the common Data Science Folder including:
+* *Contains downloaded files from the common Data Science Folder including:* 
 
 - Useful links
 - Useful codes
