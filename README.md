@@ -1,4 +1,4 @@
-# Data Science Course 2019
+# Data Science Course 2019  :computer:
 
 ### Emma Schoenmakers s1754286
 
