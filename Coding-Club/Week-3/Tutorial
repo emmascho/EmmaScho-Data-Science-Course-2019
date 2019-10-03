@@ -1,0 +1,234 @@
+library(dplyr)
+
+Attachement du package : ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+> setwd("C:/Documents/Intro-to-R-1")
+Error in setwd("C:/Documents/Intro-to-R-1") : 
+  cannot change working directory
+> getwd()
+[1] "C:/Users/Emma Schoenmakers/Documents/Intro-to-R-1/Intro-to-R-1"
+> edidiv <- read.csv("C:/Users/C:/Users/Emma Schoenmakers/Documents/Intro-to-R-1/CC-RBasics-master/edidiv.csv")
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'C:/Users/C:/Users/Emma Schoenmakers/Documents/Intro-to-R-1/CC-RBasics-master/edidiv.csv': Invalid argument
+> edidiv <- read.csv("C:/Users/Emma Schoenmakers/Documents/Intro-to-R-1/CC-RBasics-master/edidiv.csv")
+> View(edidiv)
+> head(edidiv$taxonGroup) 
+[1] Bird Bird Bird Bird Bird Bird
+11 Levels: Beetle Bird Butterfly Dragonfly Flowering.Plants Fungus ... Mollusc
+> # Displays the first few rows of this column only
+> class(edidiv$taxonGroup)    # Tells you what type of variable we're dealing with: it's character now but we want it to be a factor
+[1] "factor"
+> 
+> edidiv$taxonGroup <- as.factor(edidiv$taxonGroup)
+> 
+> class(edidiv$taxonGroup)
+[1] "factor"
+> dim(edidiv) 
+[1] 25684     5
+> summary(edidiv)    
+                                             organisationName gridReference  
+ Biological Records Centre                           :6744    NT2673 : 2741  
+ RSPB                                                :5809    NT2773 : 2031  
+ Butterfly Conservation                              :3000    NT2873 : 1247  
+ Scottish Wildlife Trust                             :2070    NT2570 : 1001  
+ Conchological Society of Great Britain &amp; Ireland:1998    NT27   :  888  
+ The Wildlife Information Centre                     :1860    NT2871 :  767  
+ (Other)                                             :4203    (Other):17009  
+      year                      taxonName                taxonGroup  
+ Min.   :2000   Maniola jurtina      : 1710   Butterfly       :9670  
+ 1st Qu.:2006   Aphantopus hyperantus: 1468   Bird            :7366  
+ Median :2009   Turdus merula        : 1112   Flowering.Plants:2625  
+ Mean   :2009   Lycaena phlaeas      :  972   Mollusc         :2226  
+ 3rd Qu.:2011   Aglais urticae       :  959   Hymenopteran    :1391  
+ Max.   :2016   Aglais io            :  720   Mammal          : 960  
+                (Other)              :18743   (Other)         :1446  
+> 
+> Butterfly <- filter(edidiv, taxonGroup == "Butterfly")
+> Bird <- filter(edidiv, taxonGroup == "Bird")
+> Beetle <- filter(edidiv, taxonGroup == "Beetle")
+> Flowering.Plants <- filter(edidiv, taxonGroup == "Flowering.Plants")
+> Mollusc <- filter(edidiv, taxonGroup == "Mollusc")
+> Hymenopteran <- filter(edidiv, taxonGroup == "Hymenopteran")
+> Mammal <- filter(edidiv, taxonGroup == "Mammal")
+> (Other) <- filter(edidiv, taxonGroup == "(Other)")
+Error in (Other) <- filter(edidiv, taxonGroup == "(Other)") : 
+  object 'Other' not found
+> (Other) <- filter(edidiv, taxonGroup == "Other")
+Error in (Other) <- filter(edidiv, taxonGroup == "Other") : 
+  object 'Other' not found
+> (Other) <- filter(edidiv, taxonGroup == "(Other))")
+Error in (Other) <- filter(edidiv, taxonGroup == "(Other))") : 
+  object 'Other' not found
+> (Other) <- filter(edidiv, taxonGroup == "(Other)")
+Error in (Other) <- filter(edidiv, taxonGroup == "(Other)") : 
+  object 'Other' not found
+> str(edidiv$taxonGroup)
+ Factor w/ 11 levels "Beetle","Bird",..: 2 2 2 2 2 2 2 2 2 2 ...
+> length(unique(edidiv$taxonGroup)
++ 
++ 
+
+> length(unique(edidiv$taxonGroup))
+[1] 11
+> unique(edidiv$taxonGroup)
+ [1] Bird             Flowering.Plants Fungus           Beetle          
+ [5] Butterfly        Dragonfly        Hymenopteran     Lichen          
+ [9] Liverwort        Mollusc          Mammal          
+11 Levels: Beetle Bird Butterfly Dragonfly Flowering.Plants Fungus ... Mollusc
+> Dragonfly <- filter(edidiv, taxonGroup == "Dragonfly")
+> Liverwort <- filter(edidiv, taxonGroup == "Liverwort")
+> Fungus <- filter(edidiv, taxonGroup == "Fungus")
+> Lichen <- filter(edidiv, taxonGroup == "Lichen")
+> a <- length(unique(Beetle$taxonName)
++ a <- length(unique(Beetle$taxonName))
+Error: unexpected symbol in:
+"a <- length(unique(Beetle$taxonName)
+a"
+> a <- length(unique(Beetle$taxonName))
+> b <- length(unique(Beetle$taxonName))
+> b <- length(unique(Bird$taxonName)
++ b <- length(unique(Bird$taxonName)
+Error: unexpected symbol in:
+"b <- length(unique(Bird$taxonName)
+b"
+> b <- length(unique(Bird$taxonName))
+> c <- length(unique(Butterfly$taxonName))
+> d <- length(unique(Dragonfly$taxonName))
+> e
+Error: object 'e' not found
+> e <- length(unique(Fungus$taxonName))
+> f <- length(unique(Hymenopteran$taxonName))
+> g<- length(unique(Liverwort$taxonName))
+> h <- length(unique(Mollusc$taxonName))
+> i <- length(unique(Mammal$taxonName))
+> j <- length(unique(Lichen$taxonName))
+> 
+> biodiv <- c(a,b,c,d,e,f,g,h,i,j,k)     # We are chaining together all the values; pay attention to the object names you have calculated and their order
+Error: object 'k' not found
+> names(biodiv) <- c("Beetle",
++                    "Bird",
++                    "Butterfly",
++                    "Dragonfly",
++                    "Flowering.Plants",
++                    "Fungus",
++                    "Hymenopteran",
++                    "Lichen",
++                    "Liverwort",
++                    "Mammal",
++                    "Mollusc")
+Error in names(biodiv) <- c("Beetle", "Bird", "Butterfly", "Dragonfly",  : 
+  object 'biodiv' not found
+> k <- length(unique(Flowering.Plants$taxonName))
+> 
+> 
+> biodiv <- c(a,b,c,d,e,f,g,h,i,j,k)     # We are chaining together all the values; pay attention to the object names you have calculated and their order
+> names(biodiv) <- c("Beetle",
++                    "Bird",
++                    "Butterfly",
++                    "Dragonfly",
++                    "Flowering.Plants",
++                    "Fungus",
++                    "Hymenopteran",
++                    "Lichen",
++                    "Liverwort",
++                    "Mammal",
++                    "Mollusc")
+> barplot(biodiv)
+> help(barplot)  
+> png("barplot.png", width=1600, height=600) 
+> barplot(biodiv, xlab="Taxa", ylab="Number of species", ylim=c(0,600), cex.names= 1.5, cex.axis=1.5, cex.lab=1.5)
+> dev.off()
+RStudioGD 
+        2 
+> # The cex code increases the font size when greater than one (and decreases it when less than one). 
+> barplot(biodiv, xlab="Taxa", ylab="Number of species", ylim=c(0,600), cex.names= 1.5, cex.axis=1.5, cex.lab=1.5)
+> dev.off(biodiv)
+RStudioGD 
+        2 
+Warning message:
+In if (which == 1) stop("cannot shut down device 1 (the null device)") :
+  the condition has length > 1 and only the first element will be used
+> barplot(biodiv, xlab="Taxa", ylab="Number of species", ylim=c(0,600), cex.names= 1.5, cex.axis=1.5, cex.lab=1.5)
+> dev.off()
+null device 
+          1 
+> barplot(biodiv, xlab="Taxa", ylab="Number of species", ylim=c(0,600), cex.names= 1, cex.axis=1.5, cex.lab=1.5)
+> dev.off()
+null device 
+          1 
+> 
+> barplot(biodiv, xlab="Taxa", ylab="Number of species", ylim=c(0,600), cex.names= 1, cex.axis=1.5, cex.lab=1.5)
+> barplot(biodiv, xlab="Taxa", ylab="Number of species", ylim=c(0,600), cex.names= 1.5, cex.axis=1, cex.lab=1)
+> 
+> barplot(biodiv, xlab="Taxa", ylab="Number of species", ylim=c(0,600), cex.names= 1, cex.axis=1, cex.lab=1.5)
+> # Coding Club Workshop 1 - R Basics
+> barplot(biodiv, xlab="Taxa", ylab="Number of species", ylim=c(0,600), cex.names= 0.8, cex.axis=1.5, cex.lab=1.5)
+> 
+> barplot(biodiv, xlab="Taxa", ylab="Number of species", ylim=c(0,600), cex.names= 0.75, cex.axis=1.5, cex.lab=1.5)
+> 
+> barplot(biodiv, xlab="Taxa", ylab="Number of species", ylim=c(0,600), cex.names= 0.7, cex.axis=1.5, cex.lab=1.5)
+> 
+> taxa <- c("Beetle",
++           "Bird",
++           "Butterfly",
++           "Dragonfly",
++           "Flowering.Plants",
++           "Fungus",
++           "Hymenopteran",
++           "Lichen",
++           "Liverwort",
++           "Mammal",
++           "Mollusc")
+> # Turning this object into a factor, i.e. a categorical variable
+> taxa_f <- factor(taxa)
+> # Combining all the values for the number of species in an object called richness
+> richness <- c(a,b,c,d,e,f,g,h,i,j,k)
+> # Creating the data frame from the two vectors
+> biodata <- data.frame(taxa_f, richness)
+> # Saving the file
+> write.csv(biodata, file="biodata.csv")  # it will be saved in your working directory
+> png("barplot2.png", width=1600, height=600)
+> barplot(biodata$richness, names.arg=c("Beetle",
++                                       "Bird",
++                                       "Butterfly",
++                                       "Dragonfly",
++                                       "Flowering.Plants",
++                                       "Fungus",
++                                       "Hymenopteran",
++                                       "Lichen",
++                                       "Liverwort",
++                                       "Mammal",
++                                       "Mollusc"),
++         xlab="Taxa", ylab="Number of species", ylim=c(0,600))
+> dev.off()
+RStudioGD 
+        2 
+> dev.off()
+null device 
+          1 
+> png("barplot2.png", width=1600, height=600)
+> barplot(biodata$richness, names.arg=c("Beetle",
++                                       "Bird",
++                                       "Butterfly",
++                                       "Dragonfly",
++                                       "Flowering.Plants",
++                                       "Fungus",
++                                       "Hymenopteran",
++                                       "Lichen",
++                                       "Liverwort",
++                                       "Mammal",
++                                       "Mollusc"),
++         xlab="Taxa", ylab="Number of species", ylim=c(0,600))
+> dev.off()
+null device 
+          1 
