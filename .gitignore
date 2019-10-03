@@ -17,3 +17,11 @@
 *README.html
 *README_cache/
 #*README_files/
+
+# RStudio Files
+.Rproj.user/
+*.Rproj  
+
+#produced vignettes
+vignettes/*.html
+vignettes/*.pdf
