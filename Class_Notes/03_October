@@ -6,3 +6,14 @@ Agreed on the following folders:
 - Assignements
 - Readings
 - Code_of_Conduct
+
+NB: add a star in gitignore so it prevents from uploading that file
+
+Add this to gitignore file:
+# RStudio Files
+.Rproj.user/
+*.Rproj  
+
+#produced vignettes
+vignettes/*.html
+vignettes/*.pdf
