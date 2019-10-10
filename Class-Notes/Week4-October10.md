@@ -65,7 +65,24 @@ Wide data format: can scroll through entire data (columns rows, ...) but not goo
 
 For creating a pipe: 
  1. Create a dataframe
- 2. Check that you don't wanna merge datas eg. two columns merged using mutate function
+ 2. Check that you don't wanna merge datas eg. two columns merged using **mutate function
  3. Output function: eg. length() to get the length ofthe list of unique species
 
+NB: if you leave a function empty it will assume you're using the dataframe from before
 
+NB: cf. challenge 1 good to check for empty observations and exclude them, do to that you need to use dplyr functions so either:
+- drop_na()
+- filtr( | ) : this means remove x OR y factors
+- filtr ( & ) : this means remove BOTH x and y factors
+
+- Gater function creates a long form
+
+- If you put stuff as a factor (always has a rank associated with that) you will actually be able to use groupby function 
+
+Reminder: != means not equal to
+
+When you create a new column using mutate function it pop up at the end, at the very right of the table
+If using stuff in base R instead of usual tidyverse, dplyr etc, use a .$ function or tidyverse function to wrap base R function in 
+
+Don't have to change the visuals of figure but try to make it more efficient
+-> for challenge 1 : Google to know about pipes, or do second coding club tutorial on pipes!!
