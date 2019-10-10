@@ -54,4 +54,18 @@ On the other hand you could use a pipe:
 - has an input and 'shoving your data' through a pipe to get output
 Pipe name comes from René Magritte's 'ceci n'est pas une pipe' painting
 
+NB: Usually don't have to set a working directory, if you're working from your repository from Git don't need to use setwd
+Done with read function w/ filepath
+
+Packages in tidyverse: tidyr, readr, dplyr, ggplot2, purr, stringr,...
+
+Wide data format: can scroll through entire data (columns rows, ...) but not good for working w/ it only reading
+
+##### Rule for tidy data: Each variable is a column, each observation is a row
+
+For creating a pipe: 
+ 1. Create a dataframe
+ 2. Check that you don't wanna merge datas eg. two columns merged using mutate function
+ 3. Output function: eg. length() to get the length ofthe list of unique species
+
 
