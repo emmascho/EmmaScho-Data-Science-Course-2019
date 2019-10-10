@@ -1,6 +1,6 @@
 # Data Science: Week 4
 ## Data Manipulation
-#### October 10
+#### Thursday October 10
 
 For providing feedback:
 Either markdown doc, or feedback issue w/ person as collaborator or new file
@@ -53,3 +53,5 @@ Need to set up an end point as well
 On the other hand you could use a pipe:
 - has an input and 'shoving your data' through a pipe to get output
 Pipe name comes from René Magritte's 'ceci n'est pas une pipe' painting
+
+
