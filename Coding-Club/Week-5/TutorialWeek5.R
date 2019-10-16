@@ -65,9 +65,6 @@ vulture_hist
 install.packages("colourpicker")
 library(colourpicker)
 
-# Filtering the data to get records only from S. Africa and Kenya using the `filter()` function from the `dplyr` package
-African_elephantITCR <- filter(African elephant, Country.list %in% c("Kenya", "South Africa"))
-
 # Using default base graphics
 plot(vultureITCR$year, vultureITCR$abundance, col = c("#1874CD", "#68228B"))
 
