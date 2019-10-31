@@ -39,3 +39,34 @@ In other model, it would be fixed term + 1
 
 Some of the variation is removed using standardisation eg. only take data aged 3 and 6 years old.
 Also important to think about direction of random effects.
+
+#### Science & Statistical Analysis Hacking
+
+When model is statistically significant and slope (effect size). If you have a big sample size, there is no type 1 or type 2 error.
+You can never prove anything to be true, because research is only a sample unless you have data on everything (highly unlikely). 
+Type 1 error: falsely rejecting the null hypothesis
+Type 2 error: falsely rejecting the hypothesis
+" boy who cried wolf scenario".
+
+NB: can put and when doing temporal model, cna include both fixed and random effect model
+If you don't include random effects (eg in time), just to improve statistical analysis (or p hacking) that's WRONG.
+
+-> Retraction watch: website with journals being removed and 'retracted' for examples!
+
+eg. If you put year as a random effect, or include random effect (categorical), takes into account that the years are different and that variation wil be inuted and calculated and potentially minimised by the model. 
+Can usually hardly tell if random effects is included by looking at a graph but can look at methods section eg? if year is included.
+
+If your study has the same method from year to year, even having a random effect model will show little variation -> more honest way of doing this
+
+If you have a continuous variable, try to split it in categories to get random sample effect.
+
+Transparency: making raw data, code available, ...
+Pre-registration of studies: eg. in **Open Science Framework**, charity for making science more accessible through data, pre-prints of manuscripts, ... Can make it parts of it private to save it from people taking advantage of that data.
+Today's problem: no incentives to peer-review :(
+
+
+
+
+
+
+
