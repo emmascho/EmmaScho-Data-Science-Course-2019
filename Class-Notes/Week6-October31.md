@@ -40,6 +40,8 @@ In other model, it would be fixed term + 1
 Some of the variation is removed using standardisation eg. only take data aged 3 and 6 years old.
 Also important to think about direction of random effects.
 
+----
+
 #### Science & Statistical Analysis Hacking
 
 When model is statistically significant and slope (effect size). If you have a big sample size, there is no type 1 or type 2 error.
