@@ -60,6 +60,51 @@ Logging your data and non-logging using a poisson distribution would look the sa
 Can use tidystan to make a nice reproducable table
 
 
+----
+
+Google Earth Engine 
+
+This is some form of GIS since it is looking at geogrpahical data! 
+Big data: eg. LPI csv file, couldn't work with this in Excel -> needed R and tidyverse to work with it
+For even bigger data sets -> need to use Google Earth Engine and big computers to work through this
+
+Free for academics and 'charitable user' (costly to run this for Google lol)
+Theoratically works better with Google Chrome
+
+Tabs on left:
+- Assets: chunks of data
+- Docs
+
+Works with Javascript! Have to run the entire script every time (just like Python), can't run line by line like in R.
+Each script will produce a 'task' which is the output. 
+
+In order for example to show differences in forest cover, with layers of forest gain, cover and loss, just take a screenshot of forest gain and compare to loss for example. 
+Calculate cover with number of pixels for example
+
+Language:
+
+// are comments so equivalent to #
+Structure of a line:
+object.function.asking it to do smthg;
+
+
+Can select different bands for the functions (layers ?)
+
+Check Google Earth Engine script on the tutorial/ reading
+
+Can download a table as csv and will upload it to drive, can also transfer to R.
+
+**For next week: try to understand the tutorial, Javascript code and what it is does and transfer it to R to interpret**
+
+
+
+
+
+
+
+
+
+
 
 
 
